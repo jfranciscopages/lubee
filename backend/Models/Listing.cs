@@ -1,6 +1,6 @@
 ﻿namespace lubee.Models
 {
-    public class Publication
+    public class Listing
     {
         public int Id { get; set; }
         public string PropertyType { get; set; }
