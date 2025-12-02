@@ -14,9 +14,9 @@ It allows users to:
 ## Project Structure
 
 lubee/
-├── backend/ # .NET 6 API
-├── frontend/ # Vue 3 frontend
-└── README.md # This file
+- backend/ # .NET 6 API
+- frontend/ # Vue 3 frontend
+- README.md
 
 ---
 
