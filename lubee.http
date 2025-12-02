@@ -1,0 +1,6 @@
+@lubee_HostAddress = http://localhost:5151
+
+GET {{lubee_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
