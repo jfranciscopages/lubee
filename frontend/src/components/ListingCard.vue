@@ -19,7 +19,7 @@ const emit = defineEmits(["edit", "delete", "view"]);
 
             <ul class="details">
                 <li><strong>Rooms:</strong> {{ listing.rooms }}</li>
-                <li><strong>m²:</strong> {{ listing.squareMeters }}</li>
+                <li><strong>Area:</strong> {{ listing.squareMeters }}m²</li>
                 <li><strong>Age:</strong> {{ listing.age }} years</li>
             </ul>
 
@@ -45,22 +45,31 @@ const emit = defineEmits(["edit", "delete", "view"]);
     background: white;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     width: 320px;
+    height: 480px;
 }
 
 .card-img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 .card-content {
     padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .description {
     color: #555;
     font-size: 14px;
     margin: 8px 0;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .details {
@@ -77,7 +86,7 @@ const emit = defineEmits(["edit", "delete", "view"]);
 .actions {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: auto;
 }
 
 button {
