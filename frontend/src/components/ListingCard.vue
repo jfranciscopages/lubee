@@ -24,12 +24,12 @@ const emit = defineEmits(["edit", "delete", "view"]);
             </ul>
 
             <div class="actions">
-                <button @click="emit('edit', listing)">Edit</button>
-                <button class="danger" @click="emit('delete', listing.id)">Delete</button>
                 <button class="btn" @click="$emit('view', listing)">
                     View Details
                 </button>
-
+                <button @click="emit('edit', listing)">Edit</button>
+                <button class="danger" @click="emit('delete', listing.id)">Delete</button>
+                
             </div>
         </div>
     </div>
