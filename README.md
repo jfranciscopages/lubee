@@ -1,6 +1,6 @@
 # Lubee 
 
-This project is a property listing app with a **Vue 3 frontend** and a **.NET 6 backend API**.  
+This project is a property listing app with a **Vue 3 frontend** and a **.NET 8 backend API**.  
 It allows users to:
 
 - View listings in a grid
@@ -14,69 +14,30 @@ It allows users to:
 ## Project Structure
 
 lubee/
-- backend/ # .NET 6 API
-- frontend/ # Vue 3 frontend
-- README.md
+    backend/ # .NET 8 API
+    frontend/ # Vue 3 frontend (build served by Nginx)
+    docker-compose.yml
+    README.md
 
 ---
 
-## Prerequisites
+## 🚀 Running the Whole App with Docker (recommended)
+This project includes a docker-compose.yml that builds and runs both frontend and backend.
 
-- [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-- [Node.js 20+](https://nodejs.org/) (includes npm)
-
-Optional: VS Code or Visual Studio for easier development.
-
----
-
-## Running the Backend
-
-1. Open a terminal in the `backend/` folder:
+###  1. Open a terminal in the project root:
 
 ```bash
-cd backend
+cd lubee
 ```
 
-2. Restore packages:
+### 2. Build and start all services
 
 ```bash
-dotnet restore
+docker compose up --build
 ```
-
-2. Run the API
-
-```bash
-dotnet run
-```
-
-The backend will start on http://localhost:5151
-
-Swagger is available at http://localhost:5151/swagger
-(for testing endpoints)
-
-## Running the Frontend
-
-Open a terminal in the frontend/ folder:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-The frontend will start on http://localhost:5173
-
-It communicates with the backend at http://localhost:5151/api/listing
+### 3. Access the app:
+- Frontend: http://localhost:8080
+- Backend (Swagger): http://localhost:5000/swagger
 
 
 ## Contact
