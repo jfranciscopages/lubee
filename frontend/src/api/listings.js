@@ -1,12 +1,12 @@
-const BASE_URL = "http://localhost:5151/api/listing";
+const API_URL = "http://localhost:5000/api/listing";
 
 export async function getListings() {
-  const res = await fetch(BASE_URL);
+  const res = await fetch(API_URL);
   return res.json();
 }
 
 export async function getListing(id) {
-  const res = await fetch(`${BASE_URL}/${id}`);
+  const res = await fetch(`${API_URL}/${id}`);
   return res.json();
 }
 
@@ -14,7 +14,7 @@ export async function createListing(listing) {
   const payload = { ...listing };
   delete payload.id;
 
-  const res = await fetch(BASE_URL, {
+  const res = await fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -30,7 +30,7 @@ export async function createListing(listing) {
 
 
 export async function updateListing(id, listing) {
-  await fetch(`${BASE_URL}/${id}`, {
+  await fetch(`${API_URL}/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(listing),
@@ -38,7 +38,7 @@ export async function updateListing(id, listing) {
 }
 
 export async function deleteListing(id) {
-  await fetch(`${BASE_URL}/${id}`, {
+  await fetch(`${API_URL}/${id}`, {
     method: "DELETE",
   });
 }
