@@ -13,15 +13,15 @@ It allows users to:
 
 ## Project Structure
 
-lubee/
-    backend/ # .NET 8 API
-    frontend/ # Vue 3 frontend (build served by Nginx)
-    docker-compose.yml
-    README.md
+    lubee/
+        backend/ # .NET 8 API
+        frontend/ # Vue 3 frontend (build served by Nginx)
+        docker-compose.yml
+        README.md
 
 ---
 
-## 🚀 Running the Whole App with Docker (recommended)
+## 🚀 Running with Docker (recommended)
 This project includes a docker-compose.yml that builds and runs both frontend and backend.
 
 ###  1. Open a terminal in the project root:
